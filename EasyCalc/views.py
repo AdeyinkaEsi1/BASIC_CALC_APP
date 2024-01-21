@@ -15,13 +15,15 @@ def calculator(request):
             result = mat_operation(inp1, operator, inp2)
 
             if isinstance(result, (int, float)):
-                print(f'Result: {result}')
+                # print(f'Result: {result}')
+                pass
             else:
                 result = f'Error: {result}'
         except ValueError as ve:
-            result = f'Error: Invalid input. Please enter valid numbers. -- {ve}'
+            result = f'Error: Invalid input. Please enter valid numbers.'
+            # -- {ve}
         except Exception as e:
-            result = f'Error: {e}'
+            result = f'Error!: {e}'
     
 
     return render(request, 'EasyCalc/index.html', {'result': result})
