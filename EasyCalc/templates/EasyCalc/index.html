@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <form method="post" action="{% url 'calculator' %}">
+        {% csrf_token %}
+        <label for="input1">Input 1:</label>
+        <input name="input1" required>
+        
+        <label for="operator">Operator:</label>
+        <input name="operator" required>
+
+        <!-- <select name="operator" required>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select> -->
+        
+        <label for="input2">Input 2:</label>
+        <input name="input2" required>
+        
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
