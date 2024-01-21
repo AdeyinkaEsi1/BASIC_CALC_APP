@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-# from .utils import mat_operation
+from .utils import mat_operation
 
 
 def calculator(request):
@@ -9,24 +9,10 @@ def calculator(request):
     if request.method == 'POST':
         try:
             inp1 = int(request.POST['input1'])
-            operator = int(request.POST['operator'])
+            operator = request.POST['operator']
             inp2 = int(request.POST['input2'])
-
-            if operator == '+':
-                return inp1 + inp2
-            elif operator == '-':
-                return inp1 - inp2
-            elif operator == '/':
-                if inp2 != 0:  # Check for division by zero
-                    return inp1 / inp2
-                else:
-                    return 'Error: Division by zero'
-            elif operator == '*':
-                return inp1 * inp2
-            else:
-                return 'Error: Invalid operator'
             
-            # result = mat_operation(inp1, operator, inp2)
+            result = mat_operation(inp1, operator, inp2)
 
             if isinstance(result, (int, float)):
                 print(f'Result: {result}')
