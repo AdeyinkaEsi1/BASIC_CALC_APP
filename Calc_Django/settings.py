@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,8 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
+# sec28
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-qv&abp=&z7n9*9_jt6s7&5%74wh0fg)wmd(a($b!$jx*qf!z5y'
+SECRET_KEY = '28django-insecure-qv&abp=&z7n9*9_jt6s7&5%74wh0fg)wmd(a($b!$jx*qf!z5y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
