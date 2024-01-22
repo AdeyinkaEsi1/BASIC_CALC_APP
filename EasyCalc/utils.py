@@ -13,3 +13,9 @@ def mat_operation(inp1, operator, inp2):
         return inp1 * inp2
     else:
         return 'Error: Invalid operator'
+
+        return result
+    except ValueError:
+        return 'Error: Invalid input. Please enter valid numbers.'
+    except Exception as e:
+        return f'Error: {e}'
