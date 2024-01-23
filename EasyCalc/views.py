@@ -8,6 +8,4 @@ def calculator(request):
     return render(request, 'EasyCalc/index.html', {'result': result})
 
 
-if __name__ == "__main__":
-    calculator() # type: ignore
 
