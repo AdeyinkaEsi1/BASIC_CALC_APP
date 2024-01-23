@@ -1,21 +1,26 @@
 
-def mat_operation(inp1, operator, inp2):
-    if operator == '+':
-        return inp1 + inp2
-    elif operator == '-':
-        return inp1 - inp2
-    elif operator == '/':
-        if inp2 != 0:  # Check for division by zero
-            return inp1 / inp2
-        else:
-            return 'Error: Division by zero'
-    elif operator == '*':
-        return inp1 * inp2
-    else:
-        return 'Error: Invalid operator'
+# def mat_operation(expression, operator):
+#     try:
+#         # Split the expression into operands
+#         operands = [float(operand) for operand in expression.split('+')]
 
-        return result
-    except ValueError:
-        return 'Error: Invalid input. Please enter valid numbers.'
-    except Exception as e:
-        return f'Error: {e}'
+#         # Apply the operator between operands
+#         if operator == '-':
+#             result = operands[0] - sum(operands[1:])
+#         elif operator == '/':
+#             # Check for division by zero
+#             if 0 in operands[1:]:
+#                 return 'Error: Division by zero'
+#             result = operands[0] / operands[1]
+#         elif operator == '*':
+#             result = operands[0] * operands[1]
+#         elif operator == '+':
+#             result = sum(operands)
+#         else:
+#             return 'Error: Invalid operator'
+
+#         return result
+#     except ValueError:
+#         return 'Error: Invalid input. Please enter valid numbers.'
+#     except Exception as e:
+#         return f'Error: {e}'
