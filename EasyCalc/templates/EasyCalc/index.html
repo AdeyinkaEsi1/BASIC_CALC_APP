@@ -11,68 +11,71 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <title>Calculator</title>
 
-    <!-- <link href="{% static 'css/styles.css' %}" rel="stylesheet" /> -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
 </head>
+
 <body>
 
-
-<!-- Calculator Body -->
-<div class="calc-body">
-
-    <!-- Calculator Display Screen -->
-<div class="calc-screen">
-    <div id="calc-operation">1234 + 567 + </div>
-    <div id="calc-typed">890</div>
-</div>
+    <div class="calculator">
+        <div class="screen" id="screen"> </div>
+        <div class="buttons">
+            <button onclick="appendToScreen('1')">1</button>
+            <button onclick="appendToScreen('2')">2</button>
+            <button onclick="appendToScreen('3')">3</button>
+            <button onclick="appendToScreen('4')">4</button>
+            <button onclick="appendToScreen('5')">5</button>
+            <button onclick="appendToScreen('+')">+</button>
+            <!-- Add more buttons as needed -->
     
-    <!-- Calculator Buttons -->
-<div class="calc-button-row">
-    <button class="ac">AC</button>
-    <button class="opt">&#43;&#47;&#8722;</button>
-    <button class="opt">&#37;</button>
-    <button class="opt">&#247;</button>
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
-    <button class="opt">&#215;</button>
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-    <button class="opt">&#8722;</button>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button class="opt">&#43;</button>
-    <button>0</button>
-    <button>.</button>
-    <button>&#9003;</button>
-    <button class="opt">&#61;</button>
-</div>
-</div>
+            <button onclick="clearScreen()">C</button>
+            <button onclick="calculate()">=</button>
+        </div>
+    </div>
+    
 
-
-
-
-
-
-    <!-- <h1>Simple Calculator</h1>
-    <form method="post" action="{% url 'calculator' %}">
-        {% csrf_token %}
-        <label for="input1">Input 1:</label>
-        <input name="input1" required>
+    <!-- <div class="calc-body">
+        Calculator Display Screen
+        <div class="calc-screen">
+            Add your display screen content here
+            <form method="post" action="{% url 'calculator' %}">
+                <div id="calc-operation">1234 + 567 + </div>
+                <div id="calc-typed">89</div>
+            </form>
+        </div> -->
         
-        <label for="operator">Operator:</label>
-        <input name="operator" required>
+        <!-- Calculator Buttons
+        <div class="calc-button-row">
+            Add your calculator buttons here
+            <button class="ac">AC</button>
+            <button class="opt">&#43;&#47;&#8722;</button>
+            <button class="opt">&#37;</button>
+            <button class="opt">&#247;</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="opt">&#215;</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="opt">&#8722;</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="opt">&#43;</button>
+            <button>0</button>
+            <button>.</button>
+            <button>&#9003;</button>
+            <button class="opt">&#61;</button>
+        </div>
+    </div>""""
+     -->
 
-        <label for="input2">Input 2:</label>
-        <input name="input2" required>
-        
-        <button type="submit">Calculate</button>
-    </form>
+    <!-- {% if result %} -->
+        <!-- <p>Result: {{ result }}</p> -->
+    <!-- {% endif %} -->
 
-    {% if result %}
-        <p>Result: {{ result }}</p>
-    {% endif %} -->
+    <script src="{% static '/js/script.js' %}"></script>
+   
 </body>
 </html>

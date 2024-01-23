@@ -1,3 +1,5 @@
+alert('Hello from script.js!');
+
 let screen = document.getElementById('screen');
 
 function appendToScreen(value) {
