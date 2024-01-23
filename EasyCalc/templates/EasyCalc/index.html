@@ -20,60 +20,30 @@
     <div class="calculator">
         <div class="screen" id="screen"> </div>
         <div class="buttons">
+            <button onclick="clearScreen()">AC</button>
+            <button onclick="appendToScreen('/')">&#247;</button>
+            <button onclick="appendToScreen('%')">&#37;</button>
+            <button onclick="appendToScreen('+')">+</button>
+            <button onclick="appendToScreen('-')">-</button>
+            <button onclick="appendToScreen('*')">x</button>
+            <button onclick="appendToScreen('7')">7</button>
+            <button onclick="appendToScreen('8')">8</button>
+            <button onclick="appendToScreen('9')">9</button>
+            <button onclick="appendToScreen('4')">4</button>
+            <button onclick="appendToScreen('5')">5</button>
+            <button onclick="appendToScreen('6')">6</button>
             <button onclick="appendToScreen('1')">1</button>
             <button onclick="appendToScreen('2')">2</button>
             <button onclick="appendToScreen('3')">3</button>
-            <button onclick="appendToScreen('4')">4</button>
-            <button onclick="appendToScreen('5')">5</button>
-            <button onclick="appendToScreen('+')">+</button>
+            <button onclick="appendToScreen('0')">0</button>
+            <button onclick="appendToScreen('.')">.</button>
+            
             <!-- Add more buttons as needed -->
-    
-            <button onclick="clearScreen()">C</button>
             <button onclick="calculate()">=</button>
+            <button onclick="clearScreen()">C</button>
+            <button onclick="backspace()">&#9003;</button>
         </div>
     </div>
-    
-
-    <!-- <div class="calc-body">
-        Calculator Display Screen
-        <div class="calc-screen">
-            Add your display screen content here
-            <form method="post" action="{% url 'calculator' %}">
-                <div id="calc-operation">1234 + 567 + </div>
-                <div id="calc-typed">89</div>
-            </form>
-        </div> -->
-        
-        <!-- Calculator Buttons
-        <div class="calc-button-row">
-            Add your calculator buttons here
-            <button class="ac">AC</button>
-            <button class="opt">&#43;&#47;&#8722;</button>
-            <button class="opt">&#37;</button>
-            <button class="opt">&#247;</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="opt">&#215;</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="opt">&#8722;</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="opt">&#43;</button>
-            <button>0</button>
-            <button>.</button>
-            <button>&#9003;</button>
-            <button class="opt">&#61;</button>
-        </div>
-    </div>""""
-     -->
-
-    <!-- {% if result %} -->
-        <!-- <p>Result: {{ result }}</p> -->
-    <!-- {% endif %} -->
 
     <script src="{% static '/js/script.js' %}"></script>
    
